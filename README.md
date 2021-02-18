@@ -1,24 +1,22 @@
-1 - в папке programfiles/postgres/13/bin - открываем консоль
-2 - psql -U postgres
-3 - \l
-4 - create database NAME;
-5 - \connect NAME;
-6 - \dt
+1 - в папке programfiles/postgres/13/bin - открываем консоль <br>
+2 - psql -U postgres <br>
+3 - \l <br>
+4 - create database NAME; <br>
+5 - \connect NAME; <br>
+6 - \dt <br>
 
-7 ------------------
-create TABLE person
-(
-  id      SERIAL PRIMARY KEY,
-  name    VARCHAR(255),
-  surname VARCHAR(255)
-);
+7 ------------------ <br>
+create TABLE person ( <br>
+  id      SERIAL PRIMARY KEY, <br>
+  name    VARCHAR(255), <br>
+  surname VARCHAR(255) <br>
+  ); <br>
 
-create TABLE post
-(
-  id      SERIAL PRIMARY KEY,
-  title   VARCHAR(255),
-  content VARCHAR(255),
-  user_id INTEGER,
-  FOREIGN KEY (user_id) REFERENCES person (id)
-);
+create TABLE post ( <br>
+  id      SERIAL PRIMARY KEY, <br>
+  title   VARCHAR(255), <br>
+  content VARCHAR(255), <br>
+  user_id INTEGER, <br>
+  FOREIGN KEY (user_id) REFERENCES person (id) <br>
+  ); <br>
 
