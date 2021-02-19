@@ -1,8 +1,8 @@
 const Router = require('express')
 const router = new Router()
-const postrController = require('../controllers/post.controller')
+const postController = require('../controllers/post.controller')
 
-router.post('/post', postrController.createPost)
-router.get('/post', postrController.getPostsByUser)
+router.post('/post', postController.createPost)
+router.get('/post', postController.getPostsByUser)
 
 module.exports = router
